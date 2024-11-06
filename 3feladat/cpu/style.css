@@ -1,4 +1,3 @@
-/* Színek */
 :root {
     --szin1: #AD8B73;
     --szin2: #CEAB93;
@@ -6,7 +5,6 @@
     --szin4: #FFFBE9;
 }
 
-/* Alap stílusok */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -18,7 +16,6 @@ body {
     align-items: center;
 }
 
-/* Fix navbar */
 #kategoriasav {
     width: 100%;
     position: fixed;
@@ -53,7 +50,6 @@ body {
     color: var(--szin3);
 }
 
-/* Fő tartalom és dobozok */
 .tartalom {
     margin-top: 80px;
     width: 90%;
@@ -74,11 +70,30 @@ body {
     border-radius: 8px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
     background-color: var(--szin4);
+    cursor: grab;
+}
+
+.doboz.dragging {
+    opacity: 0.5;
+    cursor: grabbing;
+}
+
+.osszehasonlito-tabla div.highlight {
+    background-color: var(--szin3);
+    color: var(--szin4);
+}
+
+.osszehasonlito-tabla .doboz {
+    width: auto;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: var(--szin4);
+    color: var(--szin1);
 }
 
 .doboz img {
     width: 150px;
-    height: 150px;
     height: auto;
     border-radius: 5px;
     margin-bottom: 10px;
@@ -108,7 +123,7 @@ body {
     background-color: var(--szin3);
 }
 
-/* Összehasonlítás */
+
 .osszehasonlitas-szekcio {
     margin-top: 40px;
     width: 100%;
@@ -130,7 +145,7 @@ body {
     color: var(--szin1);
 }
 
-/* Igény leadás */
+
 .igeny-szekcio {
     margin-top: 40px;
     width: 100%;
@@ -162,3 +177,71 @@ body {
 .igeny-gomb:hover {
     background-color: var(--szin2);
 }
+
+
+.osszehasonlitas-gomb {
+    padding: 10px 20px;
+    background-color: var(--szin2);
+    color: var(--szin4);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.osszehasonlitas-gomb:hover {
+    background-color: var(--szin3);
+}
+
+#uzenet {
+    color: var(--szin1);
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.osszehasonlitas-gomb-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: var(--szin4);
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid var(--szin2);
+    width: 80%;
+    width: 850px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#modalImage{
+    width: 500px;
+}
+
+.close {
+    color: var(--szin1);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}
+
