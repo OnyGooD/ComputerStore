@@ -1,0 +1,243 @@
+:root {
+    --szin1: #AD8B73;
+    --szin2: #CEAB93;
+    --szin3: #E3CAA5;
+    --szin4: #FFFBE9;
+}
+
+/* Alapvető stílusok */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--szin4);
+    color: var(--szin1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navigációs sáv */
+#kategoriasav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--szin1);
+    padding: 10px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.kategoriak {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.kategoriak li {
+    margin: 0 15px;
+}
+
+.kategoriak a {
+    text-decoration: none;
+    color: var(--szin4);
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.kategoriak a:hover {
+    color: var(--szin3);
+}
+
+/* Tartalom beállítások */
+.tartalom {
+    margin-top: 80px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.dobozok {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.doboz {
+    border: 1px solid var(--szin2);
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--szin4);
+    cursor: grab;
+}
+
+.doboz.dragging {
+    opacity: 0.5;
+    cursor: grabbing;
+}
+
+.doboz img {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.doboz h3 {
+    font-size: 1.2em;
+    color: var(--szin1);
+}
+
+.doboz p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Gomb stílusok */
+.gomb-tobb, .osszehasonlitas-gomb, .igeny-gomb {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--szin4);
+    padding: 10px 20px;
+}
+
+.gomb-tobb {
+    background-color: var(--szin2);
+    margin-top: 10px;
+}
+
+.gomb-tobb:hover {
+    background-color: var(--szin3);
+}
+
+.osszehasonlitas-gomb {
+    background-color: var(--szin2);
+}
+
+.osszehasonlitas-gomb:hover {
+    background-color: var(--szin3);
+}
+
+.igeny-gomb {
+    background-color: var(--szin3);
+    margin: 10px 0 20px 0;
+}
+
+.igeny-gomb:hover {
+    background-color: var(--szin2);
+}
+
+/* Üzenet és központi gomb beállítások */
+#uzenet {
+    color: var(--szin1);
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.osszehasonlitas-gomb-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+/* Összehasonlító szekció */
+.osszehasonlitas-szekcio {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.osszehasonlito-tabla {
+    display: flex;
+    justify-content: space-around;
+}
+
+.osszehasonlito-tabla div {
+    width: 45%;
+    padding: 15px;
+    border: 1px solid var(--szin2);
+    border-radius: 8px;
+    text-align: center;
+    background-color: var(--szin4);
+    color: var(--szin1);
+}
+
+.osszehasonlito-tabla div.highlight {
+    background-color: var(--szin3);
+    color: var(--szin4);
+}
+
+.osszehasonlito-tabla .doboz {
+    width: auto;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: var(--szin4);
+    color: var(--szin1);
+}
+
+/* Igeny szekció */
+.igeny-szekcio {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.igeny-bemenet {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid var(--szin2);
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Modal stílusok */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: var(--szin4);
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid var(--szin2);
+    width: 850px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#modalImage {
+    width: 500px;
+}
+
+/* Modal bezárás gomb */
+.close {
+    color: var(--szin1);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}

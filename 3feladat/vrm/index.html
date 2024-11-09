@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alaplap Információk</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="kategoriasav">
+        <ul class="kategoriak">
+            <li><a href="../home/index.html">Kezdőlap</a></li>
+            <li><a href="../cpu/index.html">Processzor</a></li>
+            <li><a href="../gpu/index.html">Videókártya</a></li>
+            <li><a href="../ram/index.html">Memória</a></li>
+            <li><a href="../psu/index.html">Tápegység</a></li>
+            <li><a href="../vrm/index.html">Alaplap</a></li>
+            <li><a href="../dpl/index.html">Monitor</a></li>
+            <li><a href="../mse/index.html">Egér</a></li>
+            <li><a href="../kyb/index.html">Billentyűzet</a></li>
+        </ul>
+    </nav>
+
+    <div class="tartalom">
+        <h1>Alkatrész Információk</h1>
+        <div class="dobozok" id="alkatreszDoboz"></div>
+    </div>
+
+    <section class="osszehasonlitas-szekcio">
+        <h2>Összehasonlítás</h2>
+        <div class="osszehasonlito-tabla" id="osszeTabla">
+            <div id="osszeT1">Válassz egy terméket!</div>
+            <div id="osszeT2">Válassz egy másik terméket!</div>
+        </div>
+        <div class="osszehasonlitas-gomb-container">
+            <button id="osszehasonlitasGomb" class="osszehasonlitas-gomb">Összehasonlítás</button>
+            <p id="uzenet"></p>
+        </div>
+    </section>
+
+    <section class="igeny-szekcio">
+        <h2>Igényelj új terméket!</h2>
+        <input type="text" id="igenyMezo" class="igeny-bemenet" placeholder="Adj meg egy terméknevet">
+        <button class="igeny-gomb" onclick="igenyLead()">Igény Leadása</button>
+        <div id="igenyLista" class="igeny-lista"></div>
+    </section>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modalImage" src="" alt="">
+            <h3 id="modalName"></h3>
+            <h4 id="modalPrice"></h4>
+            <p id="modalDesc"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

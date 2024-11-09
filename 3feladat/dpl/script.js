@@ -1,14 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
     const products = [
-        { id: 1, name: "Intel Core i3-12100F", type: "intel", shortDesc: "Belépő szint, megbízható", longDesc: "Ez a 4 magos, 8 szálas processzor kiváló választás belépő szintű játékokhoz és általános felhasználáshoz, köszönhetően a magas órajelsebességének és alacsony energiafogyasztásának. Stabil teljesítményt nyújt a mindennapi feladatokhoz, például böngészéshez, irodai munkához vagy médiatartalmak fogyasztásához.", image: "images/intel1.png", price: "31 899 Ft" },
-        { id: 2, name: "Intel Core i5-12400F", type: "intel", shortDesc: "Kiváló ár-érték", longDesc: "A 6 magos és 12 szálas kialakításával a processzor remekül kezeli a modern játékokat és többfeladatos munkafolyamatokat. Nagyobb hatékonyságot biztosít intenzívebb programokhoz, és versenyképes teljesítményt nyújt kedvező ár-érték arány mellett.", image: "images/intel2.png", price: "46 999 Ft" },
-        { id: 3, name: "Intel Core i7-12700K", type: "intel", shortDesc: "Erőteljes, többmagos", longDesc: "A 12 mag és 20 szál lehetővé teszi a kiváló többfeladatos teljesítményt, beleértve a nagy teljesítményű játékokat és a komolyabb tartalomkészítési munkákat. A processzor kiemelkedő grafikai és renderelési teljesítményt kínál, mely ideális a grafikus programok futtatásához és a nagy felbontású videók szerkesztéséhez.", image: "images/intel3.png", price: "106 199 Ft" },
-        { id: 4, name: "Intel Core i9-12900KF", type: "intel", shortDesc: "Csúcs gaming teljesítmény", longDesc: "Ez a 16 magos, 24 szálas csúcskategóriás processzor lenyűgöző teljesítményt nyújt a legigényesebb alkalmazások és játékok futtatásához. Támogatja az intenzív többfeladatos munkavégzést, mint például a 4K videószerkesztés, komplex számítások és fejlett AI modellezés.", image: "images/intel4.png", price: "122 199 Ft" },
-        { id: 5, name: "AMD Ryzen 3 4100", type: "amd", shortDesc: "Alap szint, költséghatékony", longDesc: "Az ideális választás a költségvetés-barát PC-khez, hiszen a 4 mag és 8 szál kiváló hatékonyságot biztosít a mindennapi számítógépes feladatokhoz és alacsony szintű játékokhoz. Az alacsony energiafogyasztásnak köszönhetően hűvös és csendes működést garantál.", image: "images/ryzen1.png", price: "25 899 Ft" },
-        { id: 6, name: "AMD Ryzen 5 5600", type: "amd", shortDesc: "Nagy teljesítmény, megfizethető", longDesc: "A 6 magos, 12 szálas architektúrája biztosítja a kiváló játékélményt és a gyors reagálást a többfeladatos használat közben. Az optimalizált cache struktúra növeli a teljesítményt, ami különösen hasznos a nagy adatmennyiséget feldolgozó alkalmazásoknál.", image: "images/ryzen2.png", price: "47 499 Ft" },
-        { id: 7, name: "AMD Ryzen 7 5800X", type: "amd", shortDesc: "Gamingre optimalizált", longDesc: "A 8 magos, 16 szálas kialakítása ideális a professzionális tartalomkészítők és játékosok számára, mivel könnyedén kezeli az erőforrás-igényes programokat. Kimagasló órajelsebessége garantálja a sima és gyors futtatást nagy teljesítményt igénylő feladatok során.", image: "images/ryzen3.png", price: "75 199 Ft" },
-        { id: 8, name: "AMD Ryzen 9 5950X", type: "amd", shortDesc: "Professzionális munka, kimagasló", longDesc: "A 16 mag és 32 szál rendkívüli erőt ad a komoly felhasználók számára, különösen akkor, ha egyszerre több nagy igényű alkalmazás fut. Kiváló választás játékra, professzionális renderelésre és számítástechnikára, ahol a sebesség és a hatékonyság kulcsfontosságú.", image: "images/ryzen4.png", price: "132 698 Ft" }
+        { id: 1, name: "Samsung Odyssey G3 24\"", type: "Samsung", shortDesc: "Belépő szint, gyors", longDesc: "A Samsung Odyssey G3 24\" monitor 144Hz-es frissítési gyakorisággal kiváló választás kezdő játékosoknak. Full HD felbontása és gyors válaszideje zökkenőmentes játékélményt nyújt.", image: "images/samsung1.png", price: "54 900 Ft" },
+        { id: 2, name: "Samsung Odyssey G5 27\"", type: "Samsung", shortDesc: "Középkategóriás, ívelt", longDesc: "A Samsung Odyssey G5 27\" monitor 1440p felbontással és ívelt kijelzővel fokozza a játékélményt. Ideális választás azoknak, akik elmerülnének a látványban.", image: "images/samsung2.png", price: "98 500 Ft" },
+        { id: 3, name: "LG UltraGear 24GN650", type: "LG", shortDesc: "Gyors, alacsony késleltetés", longDesc: "Az LG UltraGear 24GN650 monitor 144Hz-es képfrissítéssel és 1ms válaszidővel rendelkezik, így optimális gyors mozgásokhoz. Full HD felbontású, éles képekkel támogatja a játékmenetet.", image: "images/lg1.png", price: "62 000 Ft" },
+        { id: 4, name: "LG UltraFine 27UN850-W", type: "LG", shortDesc: "4K felbontás, professzionális", longDesc: "Az LG UltraFine 27UN850-W 4K felbontással és széles színtérrel a profi felhasználók igényeit elégíti ki. Kiváló választás grafikai munkához és tartalomkészítéshez.", image: "images/lg2.png", price: "148 900 Ft" },
+        { id: 5, name: "Acer Nitro VG240Y", type: "Acer", shortDesc: "Kedvező ár, jó képminőség", longDesc: "Az Acer Nitro VG240Y 24\" monitor 75Hz-es frissítéssel és Full HD felbontással rendelkezik. Kiváló képminőséget biztosít kedvező áron, mindennapi használatra és játékra is alkalmas.", image: "images/acer1.png", price: "47 200 Ft" },
+        { id: 6, name: "Acer Predator XB271HU", type: "Acer", shortDesc: "Gamer, nagy teljesítmény", longDesc: "Az Acer Predator XB271HU monitor 165Hz-es képfrissítéssel és G-SYNC támogatással felszerelt, ideális választás a hardcore játékosok számára. Tökéletesen sima látványvilágot biztosít.", image: "images/acer2.png", price: "129 500 Ft" },
+        { id: 7, name: "Samsung Odyssey G7 32\"", type: "Samsung", shortDesc: "Csúcs ívelt monitor", longDesc: "A Samsung Odyssey G7 32\" egy nagy teljesítményű ívelt monitor, 240Hz-es frissítéssel és 1ms válaszidővel. Az ívelt kijelző és a QHD felbontás maximális játékélményt nyújt.", image: "images/samsung3.png", price: "189 900 Ft" },
+        { id: 8, name: "LG UltraGear 38GN950", type: "LG", shortDesc: "Ultrawide, prémium", longDesc: "Az LG UltraGear 38GN950 ultrawide monitor 160Hz-es frissítéssel és 3840x1600 felbontással rendelkezik. Kiváló látvány és teljesítmény egy prémium kategóriás kijelzőn.", image: "images/lg3.png", price: "349 900 Ft" }
     ];
+    
+    
+    
+    
 
     const productContainer = document.getElementById("alkatreszDoboz");
     const compareProduct1 = document.getElementById("osszeT1");
@@ -35,55 +39,21 @@ document.addEventListener("DOMContentLoaded", () => {
                 target.innerHTML = "";
                 const productCard = createProductCard(product);
                 productCard.draggable = false;
-
-                productCard.style.border = product.type === "intel" ? "2px solid #0071C5" : "2px solid #D73A31";
+            
+                if (product.type === "Samsung") {
+                    productCard.style.border = "2px solid #1428A0";
+                } else if (product.type === "LG") {
+                    productCard.style.border = "2px solid #A50034"; 
+                } else if (product.type === "Acer") {
+                    productCard.style.border = "2px solid #83B81A";
+                }
+            
                 target.appendChild(productCard);
                 updateRemainingCards(productId);
             }
         });
     });
 });
-
-function createProductCard(product) {
-    const productCard = document.createElement("div");
-    productCard.classList.add("doboz");
-    productCard.draggable = true;
-    productCard.dataset.productId = product.id;
-
-    const productImage = document.createElement("img");
-    productImage.src = product.image;
-    productImage.alt = product.name;
-    productCard.appendChild(productImage);
-
-    const productName = document.createElement("h3");
-    productName.textContent = product.name;
-    productCard.appendChild(productName);
-
-    const productPrice = document.createElement("h4");
-    productPrice.textContent = product.price;
-    productCard.appendChild(productPrice);
-
-    const productDesc = document.createElement("p");
-    productDesc.textContent = product.shortDesc;
-    productCard.appendChild(productDesc);
-
-    productCard.addEventListener("dragstart", (e) => {
-        e.dataTransfer.setData("productId", product.id);
-        productCard.classList.add("dragging");
-    });
-
-    productCard.addEventListener("dragend", () => productCard.classList.remove("dragging"));
-
-    return productCard;
-}
-
-function updateRemainingCards(draggedProductId) {
-    const remainingProducts = products.filter(product => product.id != draggedProductId);
-    const productContainer = document.getElementById("alkatreszDoboz");
-    productContainer.innerHTML = "";
-
-    remainingProducts.forEach(product => productContainer.appendChild(createProductCard(product)));
-}
 
 function igenyLead() {
     const requestInput = document.getElementById("igenyMezo");
