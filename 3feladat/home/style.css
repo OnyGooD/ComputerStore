@@ -1,4 +1,3 @@
-/* Színek */
 :root {
     --szin1: #AD8B73;
     --szin2: #CEAB93;
@@ -6,7 +5,7 @@
     --szin4: #FFFBE9;
 }
 
-/* Alap stílusok */
+/* Alapvető stílusok */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -18,7 +17,7 @@ body {
     align-items: center;
 }
 
-/* Fix navbar */
+/* Navigációs sáv */
 #kategoriasav {
     width: 100%;
     position: fixed;
@@ -53,7 +52,7 @@ body {
     color: var(--szin3);
 }
 
-/* Fő tartalom és dobozok */
+/* Tartalom beállítások */
 .tartalom {
     margin-top: 80px;
     width: 90%;
@@ -78,7 +77,6 @@ body {
 
 .doboz img {
     width: 150px;
-    height: 150px;
     height: auto;
     border-radius: 5px;
     margin-bottom: 10px;
@@ -94,71 +92,20 @@ body {
     font-size: 0.9em;
 }
 
-.gomb-tobb {
-    background-color: var(--szin2);
-    color: var(--szin4);
+/* Gomb stílusok */
+.gomb-tobb{
     border: none;
-    padding: 10px;
     border-radius: 5px;
     cursor: pointer;
+    color: var(--szin4);
+    padding: 10px 20px;
+}
+
+.gomb-tobb {
+    background-color: var(--szin2);
     margin-top: 10px;
 }
 
 .gomb-tobb:hover {
     background-color: var(--szin3);
-}
-
-/* Összehasonlítás */
-.osszehasonlitas-szekcio {
-    margin-top: 40px;
-    width: 100%;
-    max-width: 1200px;
-}
-
-.osszehasonlito-tabla {
-    display: flex;
-    justify-content: space-around;
-}
-
-.osszehasonlito-tabla div {
-    width: 45%;
-    padding: 15px;
-    border: 1px solid var(--szin2);
-    border-radius: 8px;
-    text-align: center;
-    background-color: var(--szin4);
-    color: var(--szin1);
-}
-
-/* Igény leadás */
-.igeny-szekcio {
-    margin-top: 40px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.igeny-bemenet {
-    padding: 10px;
-    margin: 10px;
-    border: 1px solid var(--szin2);
-    border-radius: 5px;
-    width: 100%;
-    max-width: 300px;
-}
-
-.igeny-gomb {
-    padding: 10px 20px;
-    background-color: var(--szin3);
-    color: var(--szin4);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
-
-.igeny-gomb:hover {
-    background-color: var(--szin2);
 }

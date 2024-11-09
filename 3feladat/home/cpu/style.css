@@ -5,6 +5,7 @@
     --szin4: #FFFBE9;
 }
 
+/* Alapvető stílusok */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -16,6 +17,7 @@ body {
     align-items: center;
 }
 
+/* Navigációs sáv */
 #kategoriasav {
     width: 100%;
     position: fixed;
@@ -50,6 +52,7 @@ body {
     color: var(--szin3);
 }
 
+/* Tartalom beállítások */
 .tartalom {
     margin-top: 80px;
     width: 90%;
@@ -78,20 +81,6 @@ body {
     cursor: grabbing;
 }
 
-.osszehasonlito-tabla div.highlight {
-    background-color: var(--szin3);
-    color: var(--szin4);
-}
-
-.osszehasonlito-tabla .doboz {
-    width: auto;
-    padding: 15px;
-    text-align: center;
-    border-radius: 8px;
-    background-color: var(--szin4);
-    color: var(--szin1);
-}
-
 .doboz img {
     width: 150px;
     height: auto;
@@ -109,13 +98,17 @@ body {
     font-size: 0.9em;
 }
 
-.gomb-tobb {
-    background-color: var(--szin2);
-    color: var(--szin4);
+/* Gomb stílusok */
+.gomb-tobb, .osszehasonlitas-gomb, .igeny-gomb {
     border: none;
-    padding: 10px;
     border-radius: 5px;
     cursor: pointer;
+    color: var(--szin4);
+    padding: 10px 20px;
+}
+
+.gomb-tobb {
+    background-color: var(--szin2);
     margin-top: 10px;
 }
 
@@ -123,7 +116,39 @@ body {
     background-color: var(--szin3);
 }
 
+.osszehasonlitas-gomb {
+    background-color: var(--szin2);
+}
 
+.osszehasonlitas-gomb:hover {
+    background-color: var(--szin3);
+}
+
+.igeny-gomb {
+    background-color: var(--szin3);
+    margin: 10px 0 20px 0;
+}
+
+.igeny-gomb:hover {
+    background-color: var(--szin2);
+}
+
+/* Üzenet és központi gomb beállítások */
+#uzenet {
+    color: var(--szin1);
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.osszehasonlitas-gomb-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+/* Összehasonlító szekció */
 .osszehasonlitas-szekcio {
     margin-top: 40px;
     width: 100%;
@@ -145,7 +170,21 @@ body {
     color: var(--szin1);
 }
 
+.osszehasonlito-tabla div.highlight {
+    background-color: var(--szin3);
+    color: var(--szin4);
+}
 
+.osszehasonlito-tabla .doboz {
+    width: auto;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: var(--szin4);
+    color: var(--szin1);
+}
+
+/* Igeny szekció */
 .igeny-szekcio {
     margin-top: 40px;
     width: 100%;
@@ -163,49 +202,7 @@ body {
     max-width: 300px;
 }
 
-.igeny-gomb {
-    padding: 10px 20px;
-    background-color: var(--szin3);
-    color: var(--szin4);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
-
-.igeny-gomb:hover {
-    background-color: var(--szin2);
-}
-
-
-.osszehasonlitas-gomb {
-    padding: 10px 20px;
-    background-color: var(--szin2);
-    color: var(--szin4);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.osszehasonlitas-gomb:hover {
-    background-color: var(--szin3);
-}
-
-#uzenet {
-    color: var(--szin1);
-    font-weight: bold;
-    margin-top: 10px;
-    text-align: center;
-}
-
-.osszehasonlitas-gomb-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 15px;
-}
-
+/* Modal stílusok */
 .modal {
     display: none;
     position: fixed;
@@ -223,16 +220,16 @@ body {
     margin: 5% auto;
     padding: 20px;
     border: 1px solid var(--szin2);
-    width: 80%;
     width: 850px;
     border-radius: 10px;
     text-align: center;
 }
 
-#modalImage{
+#modalImage {
     width: 500px;
 }
 
+/* Modal bezárás gomb */
 .close {
     color: var(--szin1);
     float: right;
@@ -244,4 +241,3 @@ body {
 .close:hover {
     color: #000;
 }
-
