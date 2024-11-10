@@ -1,14 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
     const products = [
-        { id: 1, name: "ASUS PRIME B450M-A", type: "ASUS", shortDesc: "Alap szint, stabil", longDesc: "Az ASUS PRIME B450M-A alaplap ideális választás kezdő és középkategóriás PC-khez, stabil teljesítményt biztosítva. Kompakt méretének köszönhetően könnyen illeszthető kisebb házakba is.", image: "images/asus1.png", price: "27 000 Ft" },
-        { id: 2, name: "ASUS TUF GAMING B550-PLUS", type: "ASUS", shortDesc: "Erős és megbízható", longDesc: "Az ASUS TUF GAMING B550-PLUS tartós felépítése révén tökéletes választás játékosoknak. Kimagasló hűtési rendszere biztosítja a stabil teljesítményt intenzív terhelés alatt is.", image: "images/asus2.png", price: "45 500 Ft" },
-        { id: 3, name: "MSI MAG B560 TOMAHAWK WIFI", type: "MSI", shortDesc: "Megbízható középkategória", longDesc: "Az MSI MAG B560 TOMAHAWK WIFI kiváló stabilitást és teljesítményt nyújt középkategóriás felhasználók számára. Beépített Wi-Fi modullal rendelkezik, amely gyors és stabil hálózati kapcsolatot biztosít.", image: "images/msi1.png", price: "51 300 Ft" },
-        { id: 4, name: "MSI MPG Z590 GAMING EDGE WIFI", type: "MSI", shortDesc: "Prémium játékosoknak", longDesc: "Az MSI MPG Z590 GAMING EDGE WIFI alaplap nagy teljesítményt kínál a gamereknek, fejlett hűtéssel és stabil túlhajtási lehetőségekkel. Ideális választás a komoly játékosok számára.", image: "images/msi2.png", price: "79 000 Ft" },
-        { id: 5, name: "Gigabyte B460M DS3H", type: "Gigabyte", shortDesc: "Költséghatékony és stabil", longDesc: "A Gigabyte B460M DS3H egy megbízható alaplap, amely stabil teljesítményt kínál a mindennapi feladatokhoz. Kiváló választás ár-érték arány szempontjából, középkategóriás gépekhez.", image: "images/gigabyte1.png", price: "32 800 Ft" },
-        { id: 6, name: "Gigabyte Z690 AORUS ELITE", type: "Gigabyte", shortDesc: "Csúcskategóriás", longDesc: "A Gigabyte Z690 AORUS ELITE prémium kategóriás alaplap, kimagasló teljesítményt és kompatibilitást kínál a legújabb hardverekkel. Ideális választás nagy igénybevételhez és fejlett játékhoz.", image: "images/gigabyte2.png", price: "95 400 Ft" },
-        { id: 7, name: "ASUS ROG STRIX Z490-E GAMING", type: "ASUS", shortDesc: "Gaming és túlhajtás", longDesc: "Az ASUS ROG STRIX Z490-E GAMING alaplap optimális választás a játékosok számára, magas minőséget és stabil túlhajtási lehetőségeket kínálva. Erőteljes hűtési rendszerrel rendelkezik.", image: "images/asus3.png", price: "87 000 Ft" },
-        { id: 8, name: "Gigabyte X570 AORUS ULTRA", type: "Gigabyte", shortDesc: "Extrém teljesítmény", longDesc: "A Gigabyte X570 AORUS ULTRA kiváló teljesítményt és hűtési rendszert kínál a professzionális felhasználóknak. Tökéletes választás nagy igényű alkalmazásokhoz és erőforrás-igényes játékokhoz.", image: "images/gigabyte3.png", price: "102 300 Ft" }
+        { id: 1, name: "Logitech G213 Prodigy", type: "Logitech", shortDesc: "Kezdő játékosoknak", longDesc: "A Logitech G213 Prodigy strapabíró membrános billentyűzete gyors válaszidőt és RGB világítást kínál. Ideális választás belépő szintű játékosoknak.", image: "images/logitech1.png", price: "15 000 Ft" },
+        { id: 2, name: "Logitech G Pro X", type: "Logitech", shortDesc: "Cserélhető kapcsolók", longDesc: "A Logitech G Pro X mechanikus billentyűzet cserélhető kapcsolókkal és RGB világítással rendelkezik. Kompakt kialakítása miatt ideális versenyzőknek és haladó játékosoknak.", image: "images/logitech2.png", price: "39 000 Ft" },
+        { id: 3, name: "Logitech MX Keys", type: "Logitech", shortDesc: "Produktív munka", longDesc: "A Logitech MX Keys billentyűzet kényelmes, alacsony profilú gombokkal és háttérvilágítással, ideális irodai munkához és kreatív feladatokhoz. Kiváló választás hosszú munkanapokra.", image: "images/logitech3.png", price: "34 000 Ft" },
+        { id: 4, name: "Razer Cynosa V2", type: "Razer", shortDesc: "Alap gamer választás", longDesc: "A Razer Cynosa V2 membrános billentyűzete sima és csendes működést kínál, ideális kezdő játékosok számára. Teljesen testreszabható RGB világítással rendelkezik.", image: "images/razer1.png", price: "18 000 Ft" },
+        { id: 5, name: "Razer Huntsman Mini", type: "Razer", shortDesc: "Kompakt és gyors", longDesc: "A Razer Huntsman Mini optikai kapcsolói gyors válaszidőt és pontos billentyűleütést biztosítanak. Kompakt mérete miatt ideális kisebb asztalokhoz és mobilis játékosoknak.", image: "images/razer2.png", price: "42 000 Ft" },
+        { id: 6, name: "Razer BlackWidow Elite", type: "Razer", shortDesc: "Professzionális gaming", longDesc: "A Razer BlackWidow Elite mechanikus billentyűzete tartós és gyors válaszidőt kínál, beépített multimédia vezérlőkkel. Kifejezetten versenyzők számára készült.", image: "images/razer3.png", price: "50 000 Ft" },
+        { id: 7, name: "Corsair K55 RGB PRO", type: "Corsair", shortDesc: "Megfizethető RGB", longDesc: "A Corsair K55 RGB PRO vízálló membrános billentyűzete halk működést biztosít, és testreszabható világítást kínál. Költséghatékony választás alkalmi játékosoknak.", image: "images/corsair1.png", price: "20 000 Ft" },
+        { id: 8, name: "Corsair K70 RGB MK.2", type: "Corsair", shortDesc: "Játékra optimalizált", longDesc: "A Corsair K70 RGB MK.2 mechanikus billentyűzete gyors kapcsolókkal és prémium kivitelezéssel ideális választás játékosoknak. Tartós, és több világítási profillal rendelkezik.", image: "images/corsair2.png", price: "55 000 Ft" },
+        { id: 9, name: "Corsair K95 RGB Platinum", type: "Corsair", shortDesc: "Prémium minőség", longDesc: "A Corsair K95 RGB Platinum kiváló minőségű anyagokból és programozható gombokkal készült, így a profi játékosok és tartalomgyártók kedvence. A testreszabható világítási effektek fokozzák az élményt.", image: "images/corsair3.png", price: "75 000 Ft" },
+        { id: 10, name: "Logitech G915 TKL", type: "Logitech", shortDesc: "Vezeték nélküli és kompakt", longDesc: "A Logitech G915 TKL mechanikus billentyűzet vezeték nélküli kapcsolatot és alacsony profilú kapcsolókat kínál. Ideális azoknak, akik csúcsteljesítményt keresnek kompakt kivitelben.", image: "images/logitech4.png", price: "68 000 Ft" },
+        { id: 11, name: "Razer Ornata Chroma", type: "Razer", shortDesc: "Mecha-membrános érzés", longDesc: "A Razer Ornata Chroma mecha-membrán technológiával egyesíti a mechanikus és membrános billentyűk előnyeit. Kényelmes és érzékeny, ideális hosszabb játékhoz.", image: "images/razer4.png", price: "30 000 Ft" },
+        { id: 12, name: "Corsair K60 RGB PRO", type: "Corsair", shortDesc: "Tartós és elegáns", longDesc: "A Corsair K60 RGB PRO alumínium felépítéssel és gyors Cherry VIOLA kapcsolókkal készült, így tartósságot és stílust nyújt a mindennapi használatban. Teljes RGB háttérvilágítással rendelkezik.", image: "images/corsair4.png", price: "35 000 Ft" }
     ];
+    
     
     
     
@@ -39,12 +44,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 const productCard = createProductCard(product);
                 productCard.draggable = false;
             
-                if (product.type === "ASUS") {
-                    productCard.style.border = "2px solid #00539F";
-                } else if (product.type === "MSI") {
-                    productCard.style.border = "2px solid #D32E2F"; 
-                } else if (product.type === "Gigabyte") {
-                    productCard.style.border = "2px solid #E8830A";
+                if (product.type === "Logitech") {
+                    productCard.style.border = "2px solid #0062A3";
+                } else if (product.type === "Razer") {
+                    productCard.style.border = "2px solid #00FF00"; 
+                } else if (product.type === "Corsair") {
+                    productCard.style.border = "2px solid #FFD700";
                 }
             
                 target.appendChild(productCard);
