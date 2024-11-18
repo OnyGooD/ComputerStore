@@ -120,6 +120,7 @@ function createProductCard(product) {
     const productImage = document.createElement("img");
     productImage.src = product.image;
     productImage.alt = product.name;
+    productImage.addEventListener("click", () => openModal(product));
     productCard.appendChild(productImage);
 
     const productName = document.createElement("h3");

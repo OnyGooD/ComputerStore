@@ -41,6 +41,10 @@ function createProductCard(product) {
         window.location.href = product.url;
     });
 
+    productCard.addEventListener("click", () => {
+        window.location.href = product.url;
+    });
+
     productCard.appendChild(moreInfoButton);
 
     return productCard;
