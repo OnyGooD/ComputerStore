@@ -199,13 +199,11 @@ body {
 
 .osszehasonlito-tabla div p {
     transition: 0.2s;
-    cursor: pointer;
 }
 
 .osszehasonlito-tabla div p:hover {
     transform: scale(1.05);
     transition: 0.2s;
-    cursor: pointer;
 }
 
 .osszehasonlito-tabla div.highlight {
