@@ -5,7 +5,6 @@
     --szin4: #FFFBE9;
 }
 
-/* Alapvető stílusok */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -17,7 +16,6 @@ body {
     align-items: center;
 }
 
-/* Navigációs sáv */
 #kategoriasav {
     width: 100%;
     position: fixed;
@@ -58,7 +56,6 @@ body {
     color: var(--szin3);
 }
 
-/* Tartalom beállítások */
 .tartalom {
     margin-top: 80px;
     width: 90%;
@@ -112,7 +109,6 @@ body {
     font-size: 0.9em;
 }
 
-/* Gomb stílusok */
 .gomb-tobb{
     border: none;
     border-radius: 5px;

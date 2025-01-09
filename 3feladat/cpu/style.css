@@ -5,7 +5,6 @@
     --szin4: #FFFBE9;
 }
 
-/* Alapvető stílusok */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -17,7 +16,6 @@ body {
     align-items: center;
 }
 
-/* Navigációs sáv */
 #kategoriasav {
     width: 100%;
     position: fixed;
@@ -60,7 +58,6 @@ body {
     color: var(--szin3);
 }
 
-/* Tartalom beállítások */
 .tartalom {
     margin-top: 80px;
     width: 90%;
@@ -118,7 +115,6 @@ body {
     font-size: 0.9em;
 }
 
-/* Gomb stílusok */
 .gomb-tobb, .osszehasonlitas-gomb, .igeny-gomb {
     border: none;
     border-radius: 5px;
@@ -160,7 +156,6 @@ body {
     transition: 0.2s;
 }
 
-/* Üzenet és központi gomb beállítások */
 #uzenet {
     color: var(--szin1);
     font-weight: bold;
@@ -175,7 +170,6 @@ body {
     margin-top: 15px;
 }
 
-/* Összehasonlító szekció */
 .osszehasonlitas-szekcio {
     margin-top: 40px;
     width: 100%;
@@ -220,7 +214,6 @@ body {
     color: var(--szin1);
 }
 
-/* Igeny szekció */
 .igeny-szekcio {
     margin-top: 40px;
     width: 100%;
@@ -260,7 +253,6 @@ body {
     transition: 1s;
 }
 
-/* Modal stílusok */
 .modal {
     display: none;
     position: fixed;
@@ -287,7 +279,6 @@ body {
     width: 500px;
 }
 
-/* Modal bezárás gomb */
 .close {
     color: var(--szin1);
     float: right;
